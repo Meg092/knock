@@ -4,9 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:knock_fish/pages/app_setting/app_setting_binding.dart';
 import 'package:knock_fish/pages/app_setting/app_setting_view.dart';
+import 'package:knock_fish/pages/fish_launch/fish_launch_binding.dart';
+import 'package:knock_fish/pages/fish_launch/fish_launch_view.dart';
 import 'package:knock_fish/pages/fish_main/fish_main_binding.dart';
 import 'package:knock_fish/pages/fish_main/fish_main_view.dart';
 import 'package:knock_fish/pages/fish_setting/fish_setting_binding.dart';
+import 'package:knock_fish/pages/fish_setting/fish_setting_true.dart';
 import 'package:knock_fish/pages/fish_setting/fish_setting_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Fish,
-      initialRoute: '/FishMainPage',
+      initialRoute: '/FishLaunch',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -64,7 +67,9 @@ class MyApp extends StatelessWidget {
 }
 
 List<GetPage<dynamic>> Fish =[
+  GetPage(name: '/FishLaunch', page: () => FishLaunchView(), binding: FishLaunchBinding()),
   GetPage(name: '/FishMainPage', page: () => const FishMainPage(), binding: FishMainBinding()),
   GetPage(name: '/FishSettingPage', page: () => FishSettingPage(), binding: FishSettingBinding()),
+  GetPage(name: '/FishTrue', page: () => FishSettingTrue()),
   GetPage(name: '/AppSettingPage', page: () => AppSettingPage(), binding: AppSettingBinding()),
 ];

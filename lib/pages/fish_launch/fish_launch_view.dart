@@ -10,8 +10,8 @@ class FishLaunchView extends GetView<FishLaunchLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lesch.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.pouros.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class FishLaunchView extends GetView<FishLaunchLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.owplbn();
+              controller.hjpn();
             },
             icon: const Icon(
               Icons.restart_alt,

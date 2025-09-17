@@ -22,7 +22,7 @@ class FishSettingTrue extends GetView<FishLaunchLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.cean.value)),
+              url: WebUri.uri(Uri.parse(controller.fkeiq.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
